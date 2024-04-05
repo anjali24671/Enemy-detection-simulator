@@ -1,0 +1,38 @@
+.descr-container{
+    position:relative;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    left:6vw;
+    
+
+}
+
+.sub-heading{
+    font-size: 30px;
+}
+
+.descrBox{
+    background-color: rgba(0, 0, 0, 0.573);
+    border-radius: 2px;
+    height: 200px;
+    width:350px;
+    padding:20px;
+}
+
+/* span{
+
+    display: block;
+    height: 4px;
+    width:100px;
+    margin:10px 0px;
+    background-color: orange;
+} */
+
+h2 {
+    color: rgb(109, 109, 109)
+}
+
+.description{
+    margin-top:30px;
+}

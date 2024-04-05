@@ -1,0 +1,60 @@
+import cv2
+import numpy as np
+
+def detect_red_color(frame):
+    # Convert the frame to HSV color space
+    hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    
+    # Define the lower and upper bounds for the red color in HSV
+    lower_red = np.array([0, 100, 100])
+    upper_red = np.array([10, 255, 255])
+    
+    # Create a mask for the red color
+    mask = cv2.inRange(hsv_frame, lower_red, upper_red)
+    
+    # Find contours in the mask
+    contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    
+    # Check if any contour is found
+    if contours:
+        # Get the largest contour
+        largest_contour = max(contours, key=cv2.contourArea)
+        
+        # Get the bounding rectangle for the largest contour
+        x, y, w, h = cv2.boundingRect(largest_contour)
+        
+        # Draw a rectangle around the detected object
+        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+        
+        # Find the center of the rectangle
+        center = (x + w // 2, y + h // 2)
+        
+        return frame, center
+    
+    return frame, None
+
+def main():
+    cap = cv2.VideoCapture(0)
+
+    while True:
+        ret, frame = cap.read()
+
+        if not ret:
+            break
+
+        frame, center = detect_red_color(frame)
+
+        if center:
+            # Draw a circle at the center of the detected object
+            cv2.circle(frame, center, 5, (255, 0, 0), -1)
+
+        cv2.imshow("webcam", frame)
+
+        if cv2.waitKey(1) & 0xFF == ord('x'):
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
+
+if __name__ == "__main__":
+    main()

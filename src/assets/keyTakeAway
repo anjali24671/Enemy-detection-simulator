@@ -1,0 +1,3 @@
+1) When you use import statements, the paths are resolved at compile time. However, when you generate paths dynamically at runtime, as in the case of the currentFrame function, the resolution of paths can become more complex.
+
+In your case, using require dynamically loads the image at runtime, allowing for dynamic path resolution in certain environments. 

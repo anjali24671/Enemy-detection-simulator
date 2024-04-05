@@ -1,0 +1,17 @@
+
+.span-animation {
+    margin-top:10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+span {
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 5px solid #fcfcfc;
+}
+
+

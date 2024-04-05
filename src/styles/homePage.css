@@ -1,0 +1,90 @@
+*{
+    padding:0px;
+    margin:0px;
+    overflow-x: hidden;
+   position: relative;
+   z-index:100;
+  
+    
+}
+
+.title{
+    font-size: 6vw;
+    font-weight: bolder;
+    margin-bottom:18px;
+    overflow: hidden;
+    
+}
+
+h3{
+    font-size: larger;
+}
+
+.scroll-image{
+    width:150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.scroll-canvas{
+    position:fixed;
+    background-color: blue;
+    z-index: -999;
+    left: 50%;
+    top: 50%;
+    height: 100vh;
+    width:100vw;
+    
+    transform: translate(-50%, -50%);
+}
+.adjustPicture {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: black;
+}
+
+.adjustScroll {
+    width: 100vw;
+    height: 300vh;
+    position: relative;
+    z-index: 1;
+}
+
+.adjustPicture img, .adjustPicture video{
+    height: 100vh;
+    width: 100vw;
+
+}
+
+video{
+    object-fit: cover;
+}
+
+.textContainer{
+    position:absolute;
+    width:70vw;
+    height: 20vh;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* .sliding-text-container{
+    height: 220px;
+    
+    background-color: black;
+    width: 200vw;
+    overflow-x: hidden;
+}
+
+.sliding-text{
+    font-size: 10vh;
+    white-space: nowrap;
+} */
