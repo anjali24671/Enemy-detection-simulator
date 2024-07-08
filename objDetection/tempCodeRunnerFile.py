@@ -1,1 +1,0 @@
-distance = np.sqrt((midpoint[0]-w)**2 + (midpoint[1]-h)**2)

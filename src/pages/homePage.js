@@ -15,7 +15,7 @@ import { getActiveElement } from "@testing-library/user-event/dist/utils";
 
 
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = () => {
 
@@ -86,11 +86,11 @@ const HomePage = () => {
 
     return (
         <>
-            <VideoFeed/>
+           
             <div className="adjustPicture">
             <img src={homePageImage1}></img>
                 <div className="textContainer">
-                    <h1 className="title">The Sky Gaurdians</h1>   
+                    <h1 className="title">The Sky Guardians</h1>   
                     <h3>An enemy detection simulator</h3>
                 </div>  
             </div>

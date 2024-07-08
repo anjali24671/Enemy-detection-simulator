@@ -29,17 +29,19 @@ const AboutPage = () => {
         </div>
         <div className="about-second-page">
             <div className="second-text-container">
-                <h1 className="aboutTitle">Working </h1>
+                <h2 className="aboutTitle">Working </h2>
                 <SpanAnimation />
                 <p>
                      The system works in two modes:<br></br>
+                        <br></br>
+                        
+                            - Search mode<br></br>
+                            - Track mode<br></br>
+                        
                      <br></br>
-                     - Search mode<br></br>
-                     - Track mode<br></br>
-                     <br></br>
-                     In Search mode, The system will run an object detection algo to locate the enemy. At this point the location of the potential threats will be showed to the pilot.<br></br>
+                     <span>In Search mode,</span> The system will run an object detection algo to locate the enemy. At this point the location of the potential threats will be showed to the pilot.<br></br>
                       Note: there may be multiple threats <br></br><br></br>
-                     In the Track mode: The system provides more information about one of the “interesting” target, which produces most suspicion
+                     <span>In the Track mode:</span> The system provides more information about one of the “interesting” target, which produces most suspicion
                 </p>
             </div>
             <div className="enemy-video-container">
