@@ -7,10 +7,21 @@ import detected from "../assets/videos/detected.mp4"
 
 import { Element } from 'react-scroll';
 import Sidebar from '../components/Sidebar';
+import { TutorialSection } from '../components/TutorialSection';
 
 import SpanAnimation from "../components/spanAnimation";
 import track_image from "../assets/images/v09funuctkv6xezvt46d.webp"
 const TutorialPage = () => {
+
+    let data = [
+        "When a fighter jet moves through the sky in a hostile environment, the pilot needs to know of any possible threats that may be in their zone of operation. To gain the element of surprise, a pilot must be able to spot the other aircraft before they see him. To see the other aircraft Beyond Visual Range (BVR), the pilot’s aircraft needs a radar with such capability. Flying at 25,000 feet, a fighter pilot needs to be able to identify threats that are moving below him. The RADAR needs to not only detect a possible target but also track that target. There is a lot going on when you look down below the horizon–trees, hills, buildings, ocean waves, animals, and even rainy weather. How does the radar distinguish between an aircraft and all the other ‘stuff’ going on below? Today, we will take a high-level look at what radar is and how a radar system sees through all the things that can distract it from seeing other aircraft."
+        ,"RADAR stands for Radio Detection And Ranging. A radar system detects other aircraft, ships, or other objects and the speed and direction in which they travel by sending out a pulse of high-frequency electromagnetic waves. This pulse goes out ahead of the aircraft until it encounters an object and reflects off of it. The signal then returns to the radar’s antenna for processing. if you stood on a cliff and yell toward another cliff, the sound would return to you after bouncing off the wall. If you pick the right location and yell in the direction of multiple cliffs situated at different distances away from you then your voice could return from multiple points, causing an echo. The farther away you get, the longer it takes for that yell to bounce off and return. Radio waves are like these sound waves. When an aircraft’s radar is scanning for threats over land or sea, it has to deal with clutter. Clutter can be anything from trees, ground, ocean waves, anything that can produce an unwanted echo return to the radar. Clutter can also be weather/rain, animals, chaff, and atmospheric turbulences. This clutter sending back signals makes it difficult to find the target you really want to detect. To understand how clutter is separated from a target, we first learn about the Doppler Effect."
+        , "As noted by ThePhysicsClassroom.com, “The Doppler effect is observed whenever the source of waves is moving with respect to an observer.” Sheldon Cooper of The Big Bang Theory gives us a more technical description: The Doppler Effect (or Doppler Shift) is the change in frequency or wavelength of a wave (or other periodic events) for an observer moving relative to its source."
+        , "To continue with simple explanations, we use an example of a police car. Let’s say you are standing on a corner and you hear a police car blaring its siren driving in your direction. As the siren gets closer to you, it’s pitch will sound higher than it would if the car sat stationary. As the police car approaches, passes, and then moves away from your location, the pitch will go from higher to lower."
+        , "For a visual example, observe a water bug on a puddle. As the bug moves its legs in a stationary spot, the waves created from that movement will move away from the bug in equal distance. If the bug chooses a direction to move then those waves in front of the bug will move away from it but will be closer together than the waves moving away behind the bug. The same is true for radio waves. When any object moves, it creates frequency waves. The faster it moves the higher the frequency waves are in front of it and the lower the frequency waves are behind it. This change in frequency is what is referred to as Doppler Shift. The faster or slower it moves in relation to the radar detector also affects the frequency.",
+        "When an aircraft’s radar system sends out a pulse, it can detect an object out in front once the signal returns. It can send another pulse and tell if it’s closer or farther by how long it takes the pulse to return based on the aircraft’s own location. It’s an effective way to determine an object’s location, but much slower than taking advantage of the doppler effect.",
+    ]
+
     return (
         <>
             
@@ -18,48 +29,21 @@ const TutorialPage = () => {
             <Sidebar />
             <div style={{ marginLeft: '200px', padding: '20px' }}>
                 <Element name="section1">
-                    <h2>Section 1</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum omnis eum voluptatibus quas minima dolores officiis praesentium dolorem sequi culpa, quod minus asperiores necessitatibus velit corrupti consectetur debitis placeat deserunt.
-                    Odio voluptas dolorem sit, numquam aliquam soluta et reiciendis eaque facere nulla rerum accusantium dicta dolores nihil ad deserunt labore adipisci. Odit possimus quidem voluptatum nam eveniet hic ducimus incidunt?
-                    Praesentium voluptatum iure perferendis, quisquam ut atque pariatur, quidem soluta magni ea totam laborum minima tenetur, facere quibusdam. Veritatis accusamus pariatur repellendus iste aliquid suscipit adipisci nihil eos quae aspernatur.
-                    Vitae magnam voluptatum recusandae odit cum corrupti adipisci provident laboriosam assumenda quaerat repellat, ipsam, odio sit! Dolore, eaque culpa deserunt id possimus, beatae blanditiis provident odio nesciunt tenetur quidem non!
-                    Repellat Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati molestiae id saepe omnis, est aspernatur impedit. Iste itaque commodi, dignissimos doloremque in quod excepturi quo, magni consectetur minima, nemo fuga.
-                    Tempora dignissimos similique, ipsum consequatur, et porro est odio, excepturi sunt dolores cupiditate cum quam voluptatem numquam! Sunt suscipit id expedita voluptates dolores mollitia dignissimos. Vitae repudiandae temporibus quos similique.
-                    Nobis autem sint maiores praesentium in perspiciatis soluta officiis totam deleniti voluptatibus, sequi quae veritatis maxime mollitia assumenda, asperiores delectus nulla odio aut reprehenderit cupiditate at voluptate ut. Ex, consectetur.
-                    Assumenda ea voluptates odit nobis, earum atque vitae rem quis labore quos quo error magni laboriosam voluptas, ut voluptate officiis! Non nobis exercitationem, beatae cum doloribus ducimus qui at tenetur?
-                    Explicabo a, earum blanditiis consectetur tempore velit dicta perferendis ipsum totam nemo soluta suscipit harum sint fugit, hic nam perspiciatis autem praesentium in quisquam eius vero, tempora modi? Iure, rem?
-                    Ipsa sint quasi perferendis, vitae porro fugiat animi veniam necessitatibus harum illum non, officia autem. Soluta officiis atque similique? Neque facilis ut magni aliquid, sapiente inventore exercitationem provident accusantium sint? veritatis totam aspernatur repellendus neque facere recusandae et quasi corporis magnam nam omnis delectus eveniet expedita fuga, unde consectetur eius ratione quis temporibus! Omnis animi nam laborum consequatur corrupti?</p>
+                        <TutorialSection content={data[0]} />
                 </Element>
-                    
+                
                 <Element name="section2">
-                    <h2>Section 2</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, distinctio suscipit earum asperiores omnis impedit aut expedita sapiente laboriosam delectus minima velit corrupti, beatae, eligendi placeat sunt quis cumque assumenda.
-                    Fugiat possimus quas commodi, illo nam totam sapiente facilis tenetur modi assumenda repudiandae a, ea vel reiciendis harum. Rem ratione dolor nobis vel eos a ipsa qui culpa sint odio!
-                    Suscipit deleniti consequuntur nesciunt ab beatae est omnis porro neque magni, consectetur nemo dolorem tempore! Doloribus optio maxime voluptates ducimus dolor asperiores eveniet, quibusdam, nam error voluptas dicta ea! Quisquam!
-                    At, laborum. Atque delectus ea Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum enim sit earum vero quibusdam magni autem reprehenderit dolores soluta? Accusantium sed ipsam mollitia cupiditate reprehenderit optio minus quaerat ipsum ab.
-                    Sint dolore tempora a! Eius tempora, molestias repellendus natus expedita ipsam est minus sed, voluptatem ut voluptatibus. Corporis nostrum nam dolorem, quod impedit neque placeat consequatur perferendis excepturi iure ratione?
-                    Fugit excepturi recusandae, debitis tempore eos sit cumque voluptatibus sed ullam quos autem dignissimos ad officia, dolorum reiciendis quae similique, ex fugiat suscipit! Numquam quod obcaecati porro ea repudiandae totam.
-                    Sequi necessitatibus saepe, nobis nemo, rerum mollitia quo dignissimos obcaecati iste incidunt blanditiis excepturi consequuntur? Laborum et commodi repudiandae officia, ut illo officiis, beatae deserunt tempore quam reiciendis ipsam autem?
-                    Dolore praesentium, nemo maxime libero voluptates perspiciatis dicta? Ipsa, eveniet? Sit laudantium a saepe veritatis placeat necessitatibus earum eligendi, neque ducimus harum maiores similique. Reprehenderit quo inventore eaque officiis iusto?
-                    Nam libero non eos, tempore earum amet? A fugiat saepe possimus, ipsam rem maxime voluptate molestias rerum officiis beatae deleniti, ab repellat repudiandae dicta laudantium minima accusantium, omnis cumque et? excepturi cupiditate deleniti laborum dicta facilis ab, recusandae laboriosam nisi commodi nulla maiores. Dolor, inventore nisi repellendus rerum nihil sequi ipsum deleniti officia ipsa molestias.
-                    Quia, itaque quos recusandae tempore dolorum harum voluptate sed placeat voluptas nemo aspernatur numquam beatae at. Maiores praesentium maxime ex officia nam, nisi nostrum sit earum cumque reprehenderit optio? Magni?</p>
-                    </Element>
+                        <TutorialSection heading="What is Radar?" content={data[0]}/>
+                </Element>
                     
                 <Element name="section3">
-                        <h2>Section 3</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste accusantium ratione sunt blanditiis hic ea eius temporibus error impedit odio. Velit nisi eos distinctio blanditiis necessitatibus at voluptatem mollitia fuga?
-                        Excepturi sit facilis facere tempora assumenda harum. Asperiores nam est veniam deleniti, similique voluptatum placeat cupiditate officia nihil ipsam eaque totam distinctio veritatis ea, consequuntur dicta, quidem sunt! Ad, similique?
-                        Excepturi reprehenderit quae atque deleniti tempore voluptates delectus porro impedit maxime soluta aut ipsum, placeat expedita voluptate quis obcaecati vitae iusto necessitatibus, saepe cum ipsam. Laudantium totam aspernatur eum alias.
-                        Ratione, blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, omnis. Voluptatem maxime tempore qui praesentium consectetur vero! Velit maxime sequi quia nulla assumenda ex exercitationem minima sint cupiditate! Cum, laboriosam.
-                        Impedit fugit quis cupiditate culpa voluptatibus aliquid officia officiis, consequuntur dolorem quisquam eos minima modi, ipsum aspernatur exercitationem laborum reprehenderit quasi sed debitis eius ipsa amet! Doloremque natus ipsum quos.
-                        Delectus consequatur illum quo repellat dolor ducimus, tempore consequuntur? Reprehenderit quis eius ea modi, quae ab facilis sunt ad laborum magni voluptatum eum dicta dolor, perspiciatis ratione exercitationem natus molestiae.
-                        Hic quibusdam temporibus soluta molestiae eos, doloremque quisquam illo atque consequuntur aliquid saepe et at sapiente ratione consectetur quia in. Illum dignissimos aliquid tempora, harum ipsum praesentium nobis necessitatibus repudiandae?
-                        Nisi minima tempore dolorum quis fugit quidem odit qui maxime consequatur accusamus aperiam pariatur laborum enim in ullam laboriosam consectetur natus optio, beatae soluta, veniam libero est eveniet nemo? Neque?
-                        Eius sint veniam quas, autem doloremque numquam unde, nisi, fugit dignissimos cum blanditiis repellat nihil quia ratione. Numquam officia fuga corporis! Iusto quas nemo possimus, ipsa minus consectetur placeat voluptates. Similique harum omnis quaerat minima dolorem cumque quae laborum, a esse quidem nulla molestiae fugiat velit? Alias voluptatibus velit officia, cum doloribus consequatur reiciendis earum ipsa modi accusantium!
-                        Odio perferendis magni veritatis et voluptates, tempora quisquam iste maiores, laboriosam facilis consequatur! Labore optio id, sed impedit consequatur maxime aliquam saepe temporibus! Illo eum iure aliquid, quaerat laudantium necessitatibus.
-                        Et quae, atque non, tempora aliquid ad mollitia nobis consectetur architecto omnis a hic quo quaerat eum debitis praesentium earum, dignissimos cumque. Laudantium error est iste optio nostrum facere veritatis.
-                        </p>
+                      <TutorialPage heading="Doppler Effect"/>
+                    </Element>
+                    
+                    <Element name="Police Siren">
+                        <TutorialSection />
                 </Element>
+                    
             </div>
             </div>
             {/* <div className='t-page'>
