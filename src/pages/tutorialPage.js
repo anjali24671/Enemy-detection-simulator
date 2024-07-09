@@ -10,7 +10,6 @@ import Sidebar from '../components/Sidebar';
 import { TutorialSection } from '../components/TutorialSection';
 
 import SpanAnimation from "../components/spanAnimation";
-import track_image from "../assets/images/v09funuctkv6xezvt46d.webp"
 const TutorialPage = () => {
 
     let data = [
@@ -20,29 +19,43 @@ const TutorialPage = () => {
         , "To continue with simple explanations, we use an example of a police car. Let’s say you are standing on a corner and you hear a police car blaring its siren driving in your direction. As the siren gets closer to you, it’s pitch will sound higher than it would if the car sat stationary. As the police car approaches, passes, and then moves away from your location, the pitch will go from higher to lower."
         , "For a visual example, observe a water bug on a puddle. As the bug moves its legs in a stationary spot, the waves created from that movement will move away from the bug in equal distance. If the bug chooses a direction to move then those waves in front of the bug will move away from it but will be closer together than the waves moving away behind the bug. The same is true for radio waves. When any object moves, it creates frequency waves. The faster it moves the higher the frequency waves are in front of it and the lower the frequency waves are behind it. This change in frequency is what is referred to as Doppler Shift. The faster or slower it moves in relation to the radar detector also affects the frequency.",
         "When an aircraft’s radar system sends out a pulse, it can detect an object out in front once the signal returns. It can send another pulse and tell if it’s closer or farther by how long it takes the pulse to return based on the aircraft’s own location. It’s an effective way to determine an object’s location, but much slower than taking advantage of the doppler effect.",
+        , " In track mode, the radar focuses its energy on a particular target. Because the radar is actually tracking a target, and not just displaying bricks when it gets a reflection back, it can tell the pilot a lot more about the target. This is what the F-16’s fire control radar display looks like when a target is locked: Along the top we have a lot of information about what our radar target is doing. Its aspect angle (angle between its nose position and our nose position) is 160° to the left, its heading is 190°, its airspeed is 450 knots, and our closure rate is 828 knots. with this information, the pilot gets a much better idea of what the aircraft is doing, but at the expense of information about other aircraft in the area. Note that in the above picture, the bottom-most (closest) target is locked (circle around it), the two targets further away are tracked (yellow squares), and there are two radar returns even further away (white bricks). This is demonstrating an advanced feature of modern radars, situational awareness modes. A radar in SAM combines both tracking and scanning to allow a pilot to track one or a small number of “interesting” targets while not losing the big picture of what other targets are doing. In this mode, the radar beam sweeps the sky, while briefly and regularly pausing its scan to check up on a locked target. Note that all of this comes with tradeoffs. In the end, a radar is only as powerful as it is, and you can put a lot of radar energy on one target, or spread it out weakly throughout the sky, or some compromise in between. In the above photo you can see two vertical bars spanning the height of the display — these are the azimuth scan limits. It’s the aircraft’s way of telling you, “OK, I can both track this target, and scan for other targets, but in return, I’m only going to scan a 40° wide cone in front of the aircraft, instead of the usual 60°. Radar, like life, is full of tradeoffs. An important thing to note is that a radar lock is not always mandatory to release weapons at a target. For guns kills, if the aircraft has a radar lock on a target, it can accurately gauge range to the target, and provide the pilot with the appropriate corrections for lead and gravity drop, to get an accurate guns kill. Without the radar, the pilot simply has to rely on his or her own judgement."
+    
     ]
 
     return (
         <>
-            
+     
             <div style={{ display: 'flex' }}>
             <Sidebar />
-            <div style={{ marginLeft: '200px', padding: '20px' }}>
-                <Element name="section1">
-                        <TutorialSection content={data[0]} />
+            <div className="tutorial-container" >
+                
+                <TutorialSection content={data[0]} />
+                    
+                <Element name="What is Radar">
+                    <TutorialSection heading="What is Radar?" content={data[1]}/>
                 </Element>
                 
-                <Element name="section2">
-                        <TutorialSection heading="What is Radar?" content={data[0]}/>
+                <Element name="Doppler Effect">
+                    <TutorialSection heading="Doppler Effect" content={data[2]}/>
                 </Element>
-                    
-                <Element name="section3">
-                      <TutorialPage heading="Doppler Effect"/>
-                    </Element>
-                    
-                    <Element name="Police Siren">
-                        <TutorialSection />
+                
+                <Element name="Police Siren">
+                    <TutorialSection heading="Police Siren" content={data[3]}/>
                 </Element>
+                
+                <Element name="Water Bug">
+                    <TutorialSection heading="Water Bug?" content={data[4]}/>
+                </Element>
+                
+                <Element name="Multiple Pulses to Determine Location">
+                    <TutorialSection heading="Multiple Pulses to Determine Location" content={data[0]}/>
+                </Element>
+                
+                <Element name="Track Mode">
+                    <TutorialSection heading="Track Mode?" content={data[0]}/>
+                </Element>
+               
                     
             </div>
             </div>

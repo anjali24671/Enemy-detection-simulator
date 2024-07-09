@@ -1,0 +1,37 @@
+.tutorial-container{
+    margin:40px;
+    margin-left: 180px;
+    
+}
+
+.tutorial-section{
+    margin:10px 30px;
+    line-height: 30px;
+}
+
+.tutorial-para{
+    font-size: 17px;
+   
+}
+.tutorial-heading{
+    color:rgb(68, 192, 109);
+    font-size:24px;
+    margin-bottom: 10px;
+    font-weight:300;
+    font-family: monospace;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+
+@media(max-width:800px){
+    .tutorial-container{
+        margin: 20px;
+    }
+    
+}

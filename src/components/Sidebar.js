@@ -1,28 +1,28 @@
 // Sidebar.js
 import React from 'react';
 import { Link } from 'react-scroll';
+import "../styles/sidebar.css"
 
 function Sidebar() {
+
+  const headings=['What is Radar', 'Doppler Effect', 'Police Siren', 'Water Bug', "Multiple Pulses to Determine Location", 'Track Mode']
   return (
-    <div style={{
+    <div className='sidebar-container' style={{
       position: 'fixed',
       width: '200px',
       height: '100%',
-      background: '#f8f9fa',
       padding: '10px'
     }}>
-      <h3>Navigation</h3>
-      <ul style={{ listStyleType: 'none', padding: 0 }}>
-        <li style={{cursor:"pointer"}}>
-          <Link to="section1" smooth={true} duration={500}>Section 1</Link>
+      
+    <ul>
+      {headings.map((heading) => (
+        <li>
+          <Link className="link" to={heading} smooth={true} duration={500}>
+            {heading}
+          </Link>
         </li>
-        <li  style={{cursor:"pointer"}}>
-          <Link to="section2" smooth={true} duration={500}>Section 2</Link>
-        </li>
-        <li  style={{cursor:"pointer"}}>
-          <Link to="section3" smooth={true} duration={500}>Section 3</Link>
-        </li>
-      </ul>
+      ))}
+    </ul>
     </div>
   );
 }

@@ -1,0 +1,31 @@
+
+
+ul{
+    list-style-type: none;
+    padding:10px;
+    margin: 40px 20px
+}
+
+li{
+    cursor: pointer;
+    
+}
+
+.link{
+    color:rgb(68, 192, 109);
+    font-size: 16px;
+    font-family: monospace;
+   
+}
+
+.link:hover{
+    color:rgb(113, 216, 148);
+}
+
+
+@media(max-width:800px){
+    ul{
+        display: none;
+    
+    }
+}
