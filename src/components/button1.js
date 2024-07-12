@@ -1,20 +1,15 @@
 import React from "react";
-import "../styles/button1.css"
 
 
-const Button1 = () => {
+
+const Button1 = ({ buttonTitle, location }) => {
+    console.log(location)
     return <>
-        <div className="button-container">
-            <button onClick={()=>  window.location.href = '/tutorial'}>
-                Learn Radar
+       
+            <button onClick={()=>  window.location.href = location }>
+                {buttonTitle}
             </button>
-            <button onClick={()=>  window.location.href = '/objectDetection'}>
-                Detect Enemy
-            </button>
-            <button onClick={()=>  window.location.href = '/about'}>
-                About
-            </button>
-        </div>
+      
         
     </>
 }

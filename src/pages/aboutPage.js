@@ -17,7 +17,7 @@ const AboutPage = () => {
                 <SpanAnimation />
                 
 
-                <h2>The enemy detection simulator provides following information about threat</h2>
+                <h2>The radar visualization tool provides following information about detected aircraft</h2>
                 <br></br>
                 
                 <h1>- Aspect angle</h1>

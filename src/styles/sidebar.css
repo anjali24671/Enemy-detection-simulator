@@ -8,24 +8,29 @@ ul{
 
 li{
     cursor: pointer;
-    
 }
 
 .link{
-    color:rgb(68, 192, 109);
+    color:rgb(136, 241, 241);
     font-size: 16px;
-    font-family: monospace;
    
 }
 
+ul > h1{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: monospace;
+    margin-bottom:-15px
+}
+
 .link:hover{
-    color:rgb(113, 216, 148);
+    color:rgb(214, 245, 245);
 }
 
 
 @media(max-width:800px){
     ul{
         display: none;
-    
+
     }
 }

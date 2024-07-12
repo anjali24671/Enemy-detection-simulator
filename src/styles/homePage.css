@@ -29,7 +29,7 @@ h3{
 
 .scroll-canvas{
     position:fixed;
-    background-color: blue;
+  
     z-index: -999;
     left: 50%;
     top: 50%;

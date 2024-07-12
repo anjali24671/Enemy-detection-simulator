@@ -87,6 +87,7 @@ def generate_frames():
 
             curr_time = time.time()
             if prevPosition is not None:
+                # calculate speed
                 dist = np.sqrt((midpoint[0] - prevPosition[0]) ** 2 + (midpoint[1] - prevPosition[1]) ** 2)
                 time_diff = curr_time - prev_time
                 if time_diff > 0:
@@ -99,11 +100,14 @@ def generate_frames():
             # Map detected point to radar display
             dx = midpoint[0] - radar_center[0]
             dy = radar_center[1] - midpoint[1]
+            # calculate distance
             distance = np.sqrt(dx**2 + dy**2)
+            # calculate angle
             angle = math.atan2(dy, dx)
             if angle < 0:
                 angle += 2 * np.pi
 
+            # paint the enemy red
             if distance <= radar_radius:
                 blip_x = int(radar_center[0] + (distance / radar_radius) * radar_radius * math.cos(angle))
                 blip_y = int(radar_center[1] - (distance / radar_radius) * radar_radius * math.sin(angle))

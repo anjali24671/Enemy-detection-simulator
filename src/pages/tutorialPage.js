@@ -4,7 +4,9 @@ import search_mode from "../assets/videos/search_mode.mp4";
 import track_mode from "../assets/videos/track_mode.mp4"
 import rays from "../assets/videos/rays.mp4"
 import detected from "../assets/videos/detected.mp4"
-
+import Button1 from '../components/button1';
+import search from "../assets/images/search.webp"
+import track from "../assets/images/track.webp"
 import { Element } from 'react-scroll';
 import Sidebar from '../components/Sidebar';
 import { TutorialSection } from '../components/TutorialSection';
@@ -18,17 +20,20 @@ const TutorialPage = () => {
         , "As noted by ThePhysicsClassroom.com, “The Doppler effect is observed whenever the source of waves is moving with respect to an observer.” Sheldon Cooper of The Big Bang Theory gives us a more technical description: The Doppler Effect (or Doppler Shift) is the change in frequency or wavelength of a wave (or other periodic events) for an observer moving relative to its source."
         , "To continue with simple explanations, we use an example of a police car. Let’s say you are standing on a corner and you hear a police car blaring its siren driving in your direction. As the siren gets closer to you, it’s pitch will sound higher than it would if the car sat stationary. As the police car approaches, passes, and then moves away from your location, the pitch will go from higher to lower."
         , "For a visual example, observe a water bug on a puddle. As the bug moves its legs in a stationary spot, the waves created from that movement will move away from the bug in equal distance. If the bug chooses a direction to move then those waves in front of the bug will move away from it but will be closer together than the waves moving away behind the bug. The same is true for radio waves. When any object moves, it creates frequency waves. The faster it moves the higher the frequency waves are in front of it and the lower the frequency waves are behind it. This change in frequency is what is referred to as Doppler Shift. The faster or slower it moves in relation to the radar detector also affects the frequency.",
-        "When an aircraft’s radar system sends out a pulse, it can detect an object out in front once the signal returns. It can send another pulse and tell if it’s closer or farther by how long it takes the pulse to return based on the aircraft’s own location. It’s an effective way to determine an object’s location, but much slower than taking advantage of the doppler effect.",
-        , " In track mode, the radar focuses its energy on a particular target. Because the radar is actually tracking a target, and not just displaying bricks when it gets a reflection back, it can tell the pilot a lot more about the target. This is what the F-16’s fire control radar display looks like when a target is locked: Along the top we have a lot of information about what our radar target is doing. Its aspect angle (angle between its nose position and our nose position) is 160° to the left, its heading is 190°, its airspeed is 450 knots, and our closure rate is 828 knots. with this information, the pilot gets a much better idea of what the aircraft is doing, but at the expense of information about other aircraft in the area. Note that in the above picture, the bottom-most (closest) target is locked (circle around it), the two targets further away are tracked (yellow squares), and there are two radar returns even further away (white bricks). This is demonstrating an advanced feature of modern radars, situational awareness modes. A radar in SAM combines both tracking and scanning to allow a pilot to track one or a small number of “interesting” targets while not losing the big picture of what other targets are doing. In this mode, the radar beam sweeps the sky, while briefly and regularly pausing its scan to check up on a locked target. Note that all of this comes with tradeoffs. In the end, a radar is only as powerful as it is, and you can put a lot of radar energy on one target, or spread it out weakly throughout the sky, or some compromise in between. In the above photo you can see two vertical bars spanning the height of the display — these are the azimuth scan limits. It’s the aircraft’s way of telling you, “OK, I can both track this target, and scan for other targets, but in return, I’m only going to scan a 40° wide cone in front of the aircraft, instead of the usual 60°. Radar, like life, is full of tradeoffs. An important thing to note is that a radar lock is not always mandatory to release weapons at a target. For guns kills, if the aircraft has a radar lock on a target, it can accurately gauge range to the target, and provide the pilot with the appropriate corrections for lead and gravity drop, to get an accurate guns kill. Without the radar, the pilot simply has to rely on his or her own judgement."
-    
+        "When an aircraft’s radar system sends out a pulse, it can detect an object out in front once the signal returns. It can send another pulse and tell if it’s closer or farther by how long it takes the pulse to return based on the aircraft’s own location. It’s an effective way to determine an object’s location, but much slower than taking advantage of the doppler effect."
+        ,"When the radio beam is reflected by a target aircraft, an indication appears on one of the pilot’s radar display. In search mode, no single aircraft is being tracked, but the pilot can usually tell generally what a particular radar return is doing because with each successive sweep, the radar return moves slightly <br> This is an example of the fire control radar display for an F-16 Fighting Falcon when the radar is in a search mode: <br> Each white brick is a radar return. Because the radar is only scanning, not tracking, no other information is available about the radar targets. (There is one exception: The Doppler shift of the radar return can be measured, to estimate how fast the aircraft traveling towards or away from you, much like the pitch of an inbound train’s whistle can tell you how fast it’s coming at you. This is displayed as the small white trend line originating from each brick.) Note that the cursors are over the bottom-most brick (closest to our aircraft). The pilot is ready to lock up this target. This will put the radar into a track mode"
+        , `In track mode, the radar focuses its energy on a particular target. Because the radar is actually tracking a target, and not just displaying bricks when it gets a reflection back, it can tell the pilot a lot more about the target. This is what the F-16’s fire control radar display looks like when a target is locked: Along the top we have a lot of information about what our radar target is doing. <br><br> Its aspect angle (angle between its nose position and our nose position) is 160° to the left <br> its heading is 190°<br> its airspeed is 450 knots <br> and our closure rate is 828 knots.<br></br> with this information, the pilot gets a much better idea of what the aircraft is doing, but at the expense of information about other aircraft in the area. Note that in the above picture, the bottom-most (closest) target is locked (circle around it), the two targets further away are tracked (yellow squares), and there are two radar returns even further away (white bricks). This is demonstrating an advanced feature of modern radars, situational awareness modes. A radar in SAM combines both tracking and scanning to allow a pilot to track one or a small number of “interesting” targets while not losing the big picture of what other targets are doing. In this mode, the radar beam sweeps the sky, while briefly and regularly pausing its scan to check up on a locked target. Note that all of this comes with tradeoffs. In the end, a radar is only as powerful as it is, and you can put a lot of radar energy on one target, or spread it out weakly throughout the sky, or some compromise in between. In the above photo you can see two vertical bars spanning the height of the display — these are the azimuth scan limits. It’s the aircraft’s way of telling you, “OK, I can both track this target, and scan for other targets, but in return, I’m only going to scan a 40° wide cone in front of the aircraft, instead of the usual 60°. Radar, like life, is full of tradeoffs. An important thing to note is that a radar lock is not always mandatory to release weapons at a target. For guns kills, if the aircraft has a radar lock on a target, it can accurately gauge range to the target, and provide the pilot with the appropriate corrections for lead and gravity drop, to get an accurate guns kill. Without the radar, the pilot simply has to rely on his or her own judgement.`
+
     ]
 
     return (
         <>
      
             <div style={{ display: 'flex' }}>
+
             <Sidebar />
-            <div className="tutorial-container" >
+                <div className="tutorial-container" >
+                    <h1 style={{marginLeft:"30px", fontWeight:"bold", fontSize:"40px"}}>Radar Tutorial</h1>
                 
                 <TutorialSection content={data[0]} />
                     
@@ -48,135 +53,30 @@ const TutorialPage = () => {
                     <TutorialSection heading="Water Bug?" content={data[4]}/>
                 </Element>
                 
-                <Element name="Multiple Pulses to Determine Location">
-                    <TutorialSection heading="Multiple Pulses to Determine Location" content={data[0]}/>
+                <Element  name="Multiple Pulses to Determine Location">
+                    <TutorialSection custom_style={{height:"740px", overflow:"hidden"}} heading="Multiple Pulses to Determine Location" videoURL={search_mode} content={data[0]}/>
                 </Element>
-                
+
+                <Element name="Search Mode">
+                    <TutorialSection  heading="Search Mode" imageURL={search} content={data[6]}/>
+                </Element>
+                    
                 <Element name="Track Mode">
-                    <TutorialSection heading="Track Mode?" content={data[0]}/>
-                </Element>
-               
-                    
-            </div>
-            </div>
-            {/* <div className='t-page'>
-                <div className='t-content'>
+                        <TutorialSection heading="Track Mode" imageURL={track} content={data[7]} />
                  
-                    
-                    <div className="t-sub-content first-sub-content">
-                     
-                        <div className="t-description-content">
-                            <h2>How Radar Works</h2>
-                            <SpanAnimation />
-                            <p>Radars in fighter jets are crucial for detecting, tracking, and engaging targets. They operate in different modes to provide comprehensive situational awareness and target engagement capabilities.
-                            </p>
-                            <div className="t-video-content">
-                                <div className='t-video-container-2'>
-                                    <video className="t-video"  src={rays} autoPlay loop></video>
-                                </div>
-                            </div>
-                        
-                            <ul>
-                                <li><span>Transmission:</span> The radar system transmits high-frequency radio waves (pulses) through an antenna.</li>
-                                <li><span>Reflection:</span> These waves travel through the air and reflect off objects (like enemy aircraft or missiles).</li>
-                                <li><span>Reception:</span> The radar's antenna receives the reflected waves (echoes) and the system calculates the distance, speed, and direction of the object based on the time delay and frequency shift of the returned signals.</li>
-                            </ul>
-                        </div> 
-
-                        <div className="t-video-content">
-                                <div className='t-video-container'>
-                                    <video className="t-video" src={rays} autoPlay loop></video>
-                                </div>
+                    </Element>
+                    <div style={{ display: "flex", alignItems: "start", justifyContent: "center" }}>
+                        <video className="t-last-video" autoPlay={true} loop src={track_mode} />
+                        <div style={{marginTop:"30px", display:"flex", flexDirection:"column"}}>
+                            <Button1 buttonTitle={"Visualize"} location={'/objectDetection'} />
+                            <Button1 buttonTitle={"About"} location={"/about"} />
                         </div>
-                        
-                    </div>
 
-                    <div className="t-sub-content">
-                        <div className="t-description-content">
-                            <h2>Search Mode</h2>
-                            <SpanAnimation />
-                            
-                            <div className="t-video-content">
-                                <div className='t-video-container-2'>
-                                    <video className="t-video" src={rays} autoPlay loop></video>
-                                </div>
-                            </div>
-
-                            <p>Search mode is designed to scan large volumes of airspace to detect potential targets.</p>
-                            <ul>
-                                <li><span>Volume Search:</span> The radar sweeps a wide area, often using a pattern like a sector scan, spiral, or raster to cover the entire search volume.</li>
-                                <li><span>Pulse-Doppler Processing:</span> Differentiates moving targets from stationary ones based on the Doppler effect (frequency shift due to relative motion).</li>
-                                <li><span>Scan Patterns:</span> These can include conical scanning (rotating cone pattern), sector scanning (fixed sector of space), and raster scanning (moving in a grid-like pattern).</li>
-                            </ul>
-                        </div>
-                      
-                        <div className="t-video-content">
-                            <div className='t-video-container'>
-                                <video className="t-video" src={search_mode} autoPlay loop></video>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div className="t-sub-content">
-                    
-                        <div className="t-description-content">
-                            <h2>Track Mode</h2>
-                            <SpanAnimation />
-                            
-                            <div className="t-video-content">
-                                <div className='t-video-container-2'>
-                                    <video className="t-video" src={rays} autoPlay loop></video>
-                                </div>
-                            </div>
-
-                            <p>Track mode is used to maintain continuous tracking of a specific target after it has been detected in search mode.</p>
-                            <ul >
-                                <li><span>Target Acquisition:</span> After a target is detected, the radar switches to track mode to follow the target more precisely.</li>
-                                <li><span>Track-While-Scan (TWS):</span> A hybrid mode that continues to search while tracking multiple targets simultaneously.</li>
-                                <li><span>Pulse Doppler:</span> These methods provide constant updates on the target’s range, speed, and vector.
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div className="t-video-content">
-                            <div className='t-video-container'>
-                                <video className="t-video"  src={detected} autoPlay loop></video>
-                            </div>
-                        </div>
-                       
                     </div>
                     
-
-                    <div className="t-sub-content">
-                     
-                        <div className="t-description-content">
-                            <h2>Head-Up Display in track mode</h2>
-                            <SpanAnimation />
-                            
-
-                            <div className="t-video-content">
-                                <div style={{height:"400px"}} className='t-video-container-2'>
-                                    <video className="t-video" src={rays} autoPlay loop></video>
-                                </div>
-                            </div>   
-                            <ul>
-                                <li><span>Target Symbol:</span> Displays a moving symbol (like a box or crosshair) on the HUD, locked onto the target, tracking its movements in real-time.</li>
-                                <li><span>Target Data:</span> Shows critical information around the target symbol, including range, speed, and heading.</li>
-                                <li><span>Weapon Guidance:</span> Provides lead indicators and lock confirmation for aiming and engaging the target accurately.</li>
-                                <li><span>Dynamic Adjustments:</span> Continuously updates to reflect the target’s position and movements, aiding precise tracking and engagement.</li>
-                            </ul>
-                        </div>
-                        
-                        <div  className="t-video-content">
-                            <div  style={{height:"700px", transform:"scale(0.6)"}}  className='t-video-container'>
-                                <video className="t-video" style={{transform:"scale(0.4) translateX(-800px) translateY(-1500px)"}}  src={track_mode} autoPlay loop></video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
+            </div>
+            </div>
+           
         </>
     );
 }

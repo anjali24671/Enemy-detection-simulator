@@ -1,6 +1,7 @@
 // Sidebar.js
 import React from 'react';
 import { Link } from 'react-scroll';
+import SpanAnimation from './spanAnimation';
 import "../styles/sidebar.css"
 
 function Sidebar() {
@@ -13,8 +14,10 @@ function Sidebar() {
       height: '100%',
       padding: '10px'
     }}>
-      
-    <ul>
+    
+      <ul>
+        <h1>Tutorial</h1>
+        <SpanAnimation/>
       {headings.map((heading) => (
         <li>
           <Link className="link" to={heading} smooth={true} duration={500}>
