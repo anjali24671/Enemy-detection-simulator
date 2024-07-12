@@ -3,7 +3,7 @@ import "./spanAnimation.css"
 import { useEffect } from "react";
 import gsap from "gsap";
 
-const SpanAnimation = () => {
+const SpanAnimation = ({}) => {
 
     useEffect(()=>{
         const span1 = document.querySelector(".span-animation span:nth-child(2)");
@@ -18,8 +18,6 @@ const SpanAnimation = () => {
           .fromTo(span3, {marginLeft:0}, {marginLeft:30, duration:0.1})
           .fromTo(span4, {marginLeft:0}, {marginLeft:15, duration:0.1})
           .fromTo(span5, {marginLeft:0}, {marginLeft:30, duration:0.1})
-          
-
           tl.play()
     }, [])
 

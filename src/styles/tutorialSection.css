@@ -1,0 +1,76 @@
+.tutorial-container{
+    margin:40px;
+    margin-left: 180px;
+ 
+}
+
+.t-last-video{
+    width:300px;
+    margin:30px;
+}
+.t-image{
+    margin-bottom: 30px;
+}
+.t-video{
+    
+    width:60vw;
+    margin:-270px 0px;
+    z-index:0;
+   
+}
+
+.tutorial-section{
+    margin:10px 30px;
+    line-height: 30px;
+ 
+}
+
+.tutorial-para{
+    font-size: 17px;
+   
+}
+.tutorial-heading{
+    color:rgb(136, 241, 241);
+    font-size:24px;
+    margin-bottom: 30px;
+    font-weight:300;
+    font-family: monospace;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+
+@media(max-width:800px){
+    .tutorial-container{
+        margin: 20px;
+    }
+
+    .t-video{
+        width:80vw;
+        margin:-100px 0px;
+        z-index:0;
+        display: block;
+    }
+    
+}
+
+
+@media(min-width: 800px) and (max-width: 1300px){
+
+    .tutorial-section{
+        margin:10px 30px;
+        line-height: 30px;
+    }
+    .t-video{
+        width:80vw;
+        margin: -200px 0px;
+        z-index:0;
+        display:block
+    }
+    
+}

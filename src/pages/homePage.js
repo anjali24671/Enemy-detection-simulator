@@ -1,6 +1,8 @@
 import React, { useReducer } from "react";
 import DescriptionBox from "../components/descriptionBox.js";
+import VideoFeed from "../components/VideoFeed.js";
 import Button1 from "../components/button1.js"
+import "../styles/button1.css"
 import '../styles/homePage.css'
 import homePageImage1 from "../assets/images/f34.png"
 import homePageImage2 from "../assets/images/f19.png";
@@ -12,15 +14,14 @@ import { useEffect } from "react";
 import { getActiveElement } from "@testing-library/user-event/dist/utils";
 
 
-gsap.registerPlugin(ScrollTrigger);
+
+
+// gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = () => {
 
-   
-
     useEffect(() => {
         
-
         const html = document.documentElement;
         const canvas = document.querySelector('canvas');
         const context = canvas.getContext('2d');
@@ -86,11 +87,12 @@ const HomePage = () => {
 
     return (
         <>
+           
             <div className="adjustPicture">
             <img src={homePageImage1}></img>
                 <div className="textContainer">
-                    <h1 className="title">The Sky Gaurdians</h1>   
-                    <h3>An enemy detection simulator</h3>
+                    <h1 className="title">The Sky Guardians</h1>   
+                    <h3>An interactive RADAR tutorial</h3>
                 </div>  
             </div>
 
@@ -99,15 +101,19 @@ const HomePage = () => {
                 {/* <img src={homePageImage2}></img> */}
                 <canvas className="scroll-canvas">
                 </canvas>
-                <DescriptionBox title="Real-time Enemy Tracking" data='The simulator provides real-time tracking of enemy aircraft using RGB sensors, allowing users to monitor their position accurately.'/>
-                <DescriptionBox title="Directional Awareness" data='With the use of RGB sensors, users can determine the direction from which the enemy aircraft is approaching, enhancing situational awareness.'/>
-                <DescriptionBox title="Speed Detection" data='The simulator accurately measures the speed of enemy aircraft, enabling users to anticipate their movements and take appropriate actions.'/>
+                <DescriptionBox title="Radar visualization tool" data='The tool simulates the tracking of aircraft using RGB sensors, allowing users to monitor their position accurately.'/>
+                <DescriptionBox title="Directional Awareness" data='With the use of RGB sensors, users can determine the direction from which the aircraft is approaching, enhancing situational awareness.'/>
+                <DescriptionBox title="Speed Detection" data='The tool accurately measures the speed of enemy aircraft, enabling users to visualize their movements and take appropriate actions.'/>
             </div>
 
          
             <div className="adjustPicture">  
                 <video autoPlay loop muted src={homePageiVideo}></video>
-                <Button1 />
+                <div className="button-container">
+                    <Button1 buttonTitle={"Learn RADAR"} location={'/tutorial'}/>
+                    <Button1 buttonTitle={"Visualize RADAR"} location={'/objectDetection'}/>
+                    <Button1 buttonTitle={"About"} location={"/about"} />
+                </div>
             </div>
         </>
         

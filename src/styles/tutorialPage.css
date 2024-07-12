@@ -1,0 +1,8 @@
+
+
+ul{
+    font-size:x-small;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
